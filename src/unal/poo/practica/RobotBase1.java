@@ -5,7 +5,7 @@ import becker.robots.*;
 /** 
  * Practica de los conceptos de Programacion Estructurada
  * @author Fabian Andres Giraldo */
-public class RobotBase
+public class RobotBase1
 {    
        //Declaracion de Variables -- Forma temporal - No es buena practica tener
        //variables estaticas
@@ -19,26 +19,30 @@ public class RobotBase
             
             //Direction.NORTH, EAST, SOUTH, WEST
             //Definicion de la ubicacion del robot, Ciudad, posicion, Direccion, Numero things en el bolso.
-            estudiante = new Robot(objetos,0, 2, Direction.WEST,10);
+            estudiante = new Robot(objetos, 1, 2, Direction.SOUTH,10);
             
-            boolean stop = false;    
-          
-            for(int j = 0; j < 2; j++){    
-                estudiante.turnLeft();
-                estudiante.turnLeft();
-                estudiante.move();
-                if(stop)break;
-                for(int i = 0; i < 4; i++){
-                    estudiante.turnLeft();
-                    estudiante.turnLeft();
-                    estudiante.turnLeft();
-                    estudiante.move();
-                    estudiante.move();
-                    estudiante.move();
-                    stop = true;
-                }
-            }
-            
+           
+            estudiante.turnLeft();
+            estudiante.turnLeft();
+            estudiante.turnLeft();
+            estudiante.move();
+            estudiante.turnLeft();
+            estudiante.move();
+            estudiante.turnLeft();
+            estudiante.move();
+            if(estudiante.canPickThing())estudiante.pickThing();
+            estudiante.turnLeft();
+            estudiante.turnLeft();
+            estudiante.move();
+            estudiante.turnLeft();
+            estudiante.turnLeft();
+            estudiante.turnLeft();
+            estudiante.move();
+            estudiante.turnLeft();
+            estudiante.turnLeft();
+            estudiante.turnLeft();
+            estudiante.move();
+           
             
             
             
